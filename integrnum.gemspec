@@ -8,8 +8,9 @@ Gem::Specification.new do |spec|
   spec.authors = ["jbetonov"]
   spec.email = ["torportatzi@gmail.com"]
 
-  spec.summary = "Summary ."
-  spec.description = "Description"
+  spec.summary = "Library for numerical integration of functions."
+  spec.description = "Designed to calculate the value of a definite integral." \
+  "The library provides 3 calculation methods."
   spec.homepage = "https://github.com/jbetonov/integrnum"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
