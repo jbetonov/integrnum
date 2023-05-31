@@ -63,8 +63,6 @@ def self.trapezoid(func, min_lim, max_lim, delta)
 end
 
 #метод парабол
-
-
 def self.parabola(func, min_lim, max_lim, delta)
     def self.integrate(func, min_lim, max_lim, n)
         integral = 0.0
