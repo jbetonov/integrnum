@@ -10,14 +10,15 @@ module Integrnum
   end
 
   def self.rectangular(min_lim, max_lim, n)
-
+    return 0
   end
 
   def self.trapezoid(min_lim, max_lim, delta)
-
+    return 0
   end
 
   def self.parabola(min_lim, max_lim, delta)
+    return 0
   end
 
 end
