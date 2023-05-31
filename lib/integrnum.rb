@@ -5,9 +5,6 @@ require_relative "integrnum/version"
 module Integrnum
   class Error < StandardError; end
 
-  def self.hello
-    'hello world'
-  end
 
   def self.rectangular(min_lim, max_lim, n)
     return 0
