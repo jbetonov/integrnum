@@ -7,6 +7,9 @@ module Integrnum
 
 
   def self.rectangular(min_lim, max_lim, n=1000, &block)
+
+  end
+  def self.rectangular(min_lim, max_lim, n)
     return 0
   end
 

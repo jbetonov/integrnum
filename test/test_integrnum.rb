@@ -18,7 +18,7 @@ class TestIntegrnum < Minitest::Test
   def test_trapezoid_integration
     return 0
   end
-  
+
   def test_parabola_integration
     return 0
   end
