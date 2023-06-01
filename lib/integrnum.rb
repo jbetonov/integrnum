@@ -10,11 +10,11 @@ module Integrnum
     return 0
   end
 
-  def self.trapezoid(min_lim, max_lim, delta)
+  def self.trapezoid(min_lim, max_lim, delta, &block)
     return 0
   end
 
-  def self.parabola(min_lim, max_lim, delta)
+  def self.parabola(min_lim, max_lim, delta, &block)
     return 0
   end
 
