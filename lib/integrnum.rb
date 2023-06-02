@@ -34,7 +34,7 @@ module Integrnum
     b = integrate(func, min_lim, max_lim, n).abs + d
     a, b = b, a if a > b
 
-    b
+    a
   end
 
 
@@ -51,7 +51,7 @@ module Integrnum
 
     d, n = 1, 1
     while d.abs > delta
-      d = (integrate(func, min_lim, max_lim, n * 2) - integrate(func, min_lim, max_lim, n)) / 3
+      d = (integrate(func, min_lim, max_lim, n * 2).abs - integrate(func, min_lim, max_lim, n).abs) / 3
       n *= 2
     end
 
@@ -75,7 +75,7 @@ module Integrnum
 
     d, n = 1, 1
     while d.abs > delta
-      d = (integrate(func, min_lim, max_lim, n * 2) - integrate(func, min_lim, max_lim, n)) / 15
+      d = (integrate(func, min_lim, max_lim, n * 2).abs - integrate(func, min_lim, max_lim, n).abs) / 15
       n *= 2
     end
 
