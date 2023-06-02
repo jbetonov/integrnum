@@ -34,7 +34,7 @@ module Integrnum
     b = integrate(func, min_lim, max_lim, n).abs + d
     a, b = b, a if a > b
 
-    return [n, a, b]
+    b
   end
 
 
@@ -59,7 +59,7 @@ module Integrnum
     b = integrate(func, min_lim, max_lim, n).abs + d
     a, b = b, a if a > b
 
-    return [n, a, b]
+    b
   end
 
   #метод парабол
@@ -84,6 +84,6 @@ module Integrnum
 
     a, b = b, a if a>b
 
-    return [n, a, b]
+    b
   end
 end
