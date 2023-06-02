@@ -33,8 +33,8 @@ module Integrnum
     a = integrate(func, min_lim, max_lim, n).abs
     b = integrate(func, min_lim, max_lim, n).abs + d
     a, b = b, a if a > b
-    puts 'Rectangles:'
-    puts "\t#{n}\t#{a}\t#{b}"
+
+    return [n, a, b]
   end
 
 
@@ -42,7 +42,7 @@ module Integrnum
   def self.trapezoid(func, min_lim, max_lim, delta)
     def self.integrate(func, min_lim, max_lim, n)
       integral = 0.0
-      step = (max_lim - min_lim) / n
+      step = (max_lim - min_lim) / n.to_f
       (min_lim...max_lim-step).step(step) do |x|
         integral += step*(func.call(x) + func.call(x + step)) / 2
       end
@@ -58,15 +58,15 @@ module Integrnum
     a = integrate(func, min_lim, max_lim, n).abs
     b = integrate(func, min_lim, max_lim, n).abs + d
     a, b = b, a if a > b
-    puts 'Trapezium:'
-    puts "\t#{n}\t#{a}\t#{b}"
+
+    return [n, a, b]
   end
 
   #метод парабол
   def self.parabola(func, min_lim, max_lim, delta)
     def self.integrate(func, min_lim, max_lim, n)
       integral = 0.0
-      step = (max_lim - min_lim) / n
+      step = (max_lim - min_lim) / n.to_f
       (min_lim + step / 2..max_lim - step / 2).step(step) do |x|
         integral += step / 6 * (func.call(x - step / 2) + 4 * func.call(x) + func.call(x + step / 2))
       end
@@ -83,7 +83,7 @@ module Integrnum
     b = (integrate(func, min_lim, max_lim, n)).abs + d
 
     a, b = b, a if a>b
-    puts 'Parabola:'
-    puts "\t#{n}\t#{a}\t#{b}"
+
+    return [n, a, b]
   end
 end
